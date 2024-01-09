@@ -9,9 +9,16 @@ Page({
 
   },
   toMyAddr() {
-    wx.navigateTo({
-      url: '/pkg_my/address/address',
-    })
+    if (this.data.userInfo == '') {
+      wx.showToast({
+        title: '请先登录',
+        icon: 'none'
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pkg_my/address/address',
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面加载

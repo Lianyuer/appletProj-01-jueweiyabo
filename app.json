@@ -23,7 +23,8 @@
       "root": "pkg_my",
       "pages": [
         "address/address",
-        "added/added"
+        "added/added",
+        "edit/edit"
       ]
     }
   ],

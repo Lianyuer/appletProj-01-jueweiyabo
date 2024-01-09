@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationStyle": "default",
+  "navigationBarBackgroundColor": "#ff0000",
+  "navigationBarTitleText": "编辑地址",
+  "navigationBarTextStyle": "white"
+}

@@ -10,12 +10,12 @@
 				</view>
 			</view>
 			<view class="right">
-				<text class="iconfont icon-bianji" style="color: rgb(99, 97, 97);"></text>
+				<text class="iconfont icon-bianji" style="color: rgb(99, 97, 97);" data-index="{{index}}" bind:tap="toEdit"></text>
 			</view>
 		</view>
 		<view class="tip">暂无更多了~</view>
 	</view>
-	<view class="footer" bind:tap="toAadded">
+	<view class="footer" bind:tap="toAdded">
 		<text class="iconfont icon-jiahao"></text>
 		新增收货地址
 	</view>

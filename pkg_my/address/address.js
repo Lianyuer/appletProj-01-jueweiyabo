@@ -1,15 +1,24 @@
 // pkg_my/address/address.js
+import { createStoreBindings } from 'mobx-miniprogram-bindings'
+import { store } from '../../store/store'
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     list: ''
   },
-  toAadded() {
+  // 跳转到新增地址页面
+  toAdded() {
     wx.navigateTo({
       url: '../added/added',
+    })
+  },
+  // 跳转到编辑地址页面
+  toEdit(e) {
+    console.log(e.currentTarget.dataset.index);
+    wx.navigateTo({
+      url: `../edit/edit?id=${e.currentTarget.dataset.index}`,
     })
   },
   getData() {
@@ -29,7 +38,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    this.storeBindings = createStoreBindings(this, {
+      store,
+      fields: ['userInfo'],
+      actions: []
+    })
   },
 
   /**
