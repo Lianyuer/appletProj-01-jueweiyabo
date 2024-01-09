@@ -1,0 +1,50 @@
+<view class="container">
+	<view class="form">
+		<!-- 收货人 -->
+		<view class="consignee">
+			<view class="tit">收货人</view>
+			<view class="right">
+				<input type="text" placeholder="姓名" />
+				<radio-group bindchange="">
+					<radio value="1" color="#ff0000" /> 先生
+					<radio value="0" color="#ff0000" /> 女士
+				</radio-group>
+			</view>
+		</view>
+		<!-- 手机号 -->
+		<view class="phone">
+			<view class="left">
+				<text class="tit">手机号</text>
+				<input type="text" placeholder="手机号码" />
+			</view>
+			<button class="autoWrite" size="mini">自动填写</button>
+		</view>
+		<!-- 地址 -->
+		<view class="addr">
+			<view class="left">
+				<text class="tit">地址</text>
+				<input type="text" placeholder="地址" />
+			</view>
+			<text class="iconfont icon-jiantou"></text>
+		</view>
+		<!-- 门牌号 -->
+		<view class="doorNum">
+			<text class="tit">门牌号</text>
+			<input type="text" placeholder="例：5号楼203室" />
+		</view>
+		<!-- 标签 -->
+		<view class="tags">
+			<view class="tit">标签</view>
+			<view class="tags-btns">
+				<button size="mini">家</button>
+				<button size="mini">公司</button>
+				<button size="mini">学校</button>
+				<button size="mini">其他</button>
+			</view>
+		</view>
+	</view>
+	<view class="behavior">
+		<button class="del">删除</button>
+		<button class="save">保存</button>
+	</view>
+</view>

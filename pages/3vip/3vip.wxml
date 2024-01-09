@@ -1,0 +1,20 @@
+<view class="barCode">
+	<view class="text">
+		<image src="../imgs/index/vip1.png" mode="" style="width: 25px;height: 23px;" />
+		<text>向商家展示会员码</text>
+	</view>
+	<view class="codePic">
+		<image src="{{barCode}}" mode="" />
+	</view>
+	<view class="prefixCode" style="margin-top:5px;">
+		{{prefixCode}}
+	</view>
+</view>
+<view class="qrCode">
+	<view class="codePic">
+		<image src="{{qrCode}}" mode="" style="width: 300rpx;height: 300rpx;" />
+	</view>
+	<view class="tip" style="margin-top: 1px;">
+		会员码每隔30s自动更新
+	</view>
+</view>

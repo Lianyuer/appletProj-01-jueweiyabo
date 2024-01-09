@@ -1,0 +1,102 @@
+<view class="center-container">
+	<!-- 顶部 -->
+	<view class="top">
+		<!-- 用户信息 -->
+		<view class="user">
+			<view class="avatar" bind:tap="login">
+				<image src="{{userInfo? userInfo.avatarUrl : '../imgs/zhanghao.png'}}" mode="" />
+				<text wx:if="{{userInfo}}">{{userInfo.nickName}}</text>
+				<text wx:else>点击登录</text>
+			</view>
+			<view class="ewm">
+				<image src="../imgs/ewm_white.png" mode="" />
+			</view>
+		</view>
+	</view>
+	<!-- 底部以下内容 -->
+	<view class="center-footer">
+		<!-- 我的资产 -->
+		<view class="myProperty">
+			<view class="tit">我的资产</view>
+			<view class="Items">
+				<view class="item">
+					<!-- <image src="https://img01.yzcdn.cn/vant/ipad.jpeg" mode="" /> -->
+					<van-icon name="award" />
+					<text>积分</text>
+				</view>
+				<view class="item">
+					<!-- <image src="https://img01.yzcdn.cn/vant/ipad.jpeg" mode="" /> -->
+					<van-icon name="coupon" />
+					<text>优惠券</text>
+				</view>
+				<view class="item">
+					<!-- <image src="https://img01.yzcdn.cn/vant/ipad.jpeg" mode="" /> -->
+					<van-icon name="gold-coin" />
+					<text>余额</text>
+				</view>
+			</view>
+		</view>
+		<!-- 我的订单 -->
+		<view class="myOrder">
+			<view class="tit">
+				<text>我的订单</text>
+				<view class="more">查看全部
+					<van-icon name="arrow" style="font-size: 12px;" />
+				</view>
+			</view>
+			<view class="Items">
+				<view class="item">
+					<!-- <image src="https://img01.yzcdn.cn/vant/ipad.jpeg" mode="" /> -->
+					<van-icon name="orders-o" />
+					<text>门店订单</text>
+				</view>
+				<view class="item">
+					<!-- <image src="https://img01.yzcdn.cn/vant/ipad.jpeg" mode="" /> -->
+					<van-icon name="credit-pay" />
+					<text>买单订单</text>
+				</view>
+				<view class="item">
+					<!-- <image src="https://img01.yzcdn.cn/vant/ipad.jpeg" mode="" /> -->
+					<van-icon name="pending-payment" />
+					<text>储值订单</text>
+				</view>
+				<view class="item">
+					<!-- <image src="https://img01.yzcdn.cn/vant/ipad.jpeg" mode="" /> -->
+					<van-icon name="certificate" />
+					<text>拼券订单</text>
+				</view>
+			</view>
+		</view>
+		<!-- 我的功能 -->
+		<view class="myFunction">
+			<view class="tit">我的功能</view>
+			<view class="Items">
+				<view class="item" bind:tap="toMyAddr">
+					<!-- <image src="https://img01.yzcdn.cn/vant/ipad.jpeg" mode="" /> -->
+					<van-icon name="location" />
+					<text>我的地址</text>
+				</view>
+				<view class="item">
+					<!-- <image src="https://img01.yzcdn.cn/vant/ipad.jpeg" mode="" /> -->
+					<van-icon name="contact" />
+					<text>个人资料</text>
+				</view>
+				<view class="item">
+					<!-- <image src="https://img01.yzcdn.cn/vant/ipad.jpeg" mode="" /> -->
+					<van-icon name="phone-circle" />
+					<text>换绑手机号</text>
+				</view>
+				<view class="item">
+					<!-- <image src="https://img01.yzcdn.cn/vant/ipad.jpeg" mode="" /> -->
+					<van-icon name="service" />
+					<text>联系客服</text>
+				</view>
+			</view>
+		</view>
+		<!-- 吃虾卡 -->
+		<image src="../imgs/ka.png" mode="" style="width: 90%;border-radius: 15px; height: 85rpx;" />
+		<!-- 技术支持 -->
+		<image src="../imgs/jue2.jpg" mode="" style="width:30px;height:30px;margin-top: 10px;" />
+		<text style="font-size: 12px; margin-top: 5px;">技术支持</text>
+	</view>
+</view>

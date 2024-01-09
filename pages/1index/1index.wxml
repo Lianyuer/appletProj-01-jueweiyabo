@@ -1,0 +1,55 @@
+<!-- 最大容器 -->
+<view class="All">
+	<!-- 轮播图 -->
+	<view class="swiper">
+		<swiper indicator-dots="true" autoplay="true" interval="2000" circular="true">
+			<swiper-item>
+				<image src="../imgs/index/lun1.png" />
+			</swiper-item>
+			<swiper-item>
+				<image src="../imgs/index/lun2.png" />
+			</swiper-item>
+			<swiper-item>
+				<image src="../imgs/index/lun3.png" />
+			</swiper-item>
+		</swiper>
+	</view>
+	<!-- 轮播图以下内容 -->
+	<view class="footer">
+		<!-- 取餐方式 -->
+		<view class="way">
+			<view class="ziqu">
+				<image src="../imgs/index/ziqu.png" mode="" />
+				<text>门店自取</text>
+				<text>预约点单到店自取</text>
+			</view>
+			<view class="waimai">
+				<image src="../imgs/index/waimai.png" mode="" />
+				<text>外卖</text>
+				<text>无接触配送</text>
+			</view>
+		</view>
+		<!-- 用户信息 -->
+		<view class="user">
+			<view class="avatar" bind:tap="login">
+				<image src="{{userInfo? userInfo.avatarUrl : '../imgs/zhanghao.png'}}" mode="" />
+				<text wx:if="{{userInfo}}">{{userInfo.nickName}}</text>
+				<text wx:else>点击登录</text>
+			</view>
+			<view class="userInfo">
+				<view class="coupon">
+					<text>xxx</text>
+					<text>优惠券</text>
+				</view>
+				<view class="balance">
+					<text>xxx</text>
+					<text>余额</text>
+				</view>
+			</view>
+		</view>
+		<!-- c位 -->
+		<view class="cwei">
+			<image src="../imgs/index/c.png" mode="" />
+		</view>
+	</view>
+</view>

@@ -1,0 +1,127 @@
+.center-container {
+	background-color: #f7f7f7;
+	width: 100%;
+	height: 100vh;
+}
+
+/* 顶部 */
+.top {
+	background-color: #D80214;
+	width: 100%;
+	height: 400rpx;
+	overflow: hidden;
+}
+
+/* 用户信息 */
+.top .user {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+	margin-top: 80px;
+	padding: 0 15px;
+}
+
+.top .user .avatar {
+	display: flex;
+	align-items: center;
+	color: #fff;
+}
+
+.top .user .avatar image {
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	margin-right: 10px;
+}
+
+.top .user .ewm image {
+	width: 30px;
+	height: 30px;
+}
+
+/* 顶部以下 */
+.center-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.center-footer van-icon {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+.myProperty van-icon {
+	color: orange;
+}
+
+.myFunction van-icon {
+	color: red;
+}
+
+.myProperty,
+.myOrder {
+	margin-bottom: 20px;
+}
+
+.myProperty,
+.myOrder,
+.myFunction {
+	background-color: #fff;
+	width: 90%;
+	height: 240rpx;
+	border-radius: 15px;
+	position: relative;
+	top: -30px;
+}
+
+.myProperty .tit,
+.myOrder .tit,
+.myFunction .tit {
+	font-weight: bolder;
+	font-size: 14px;
+	padding: 12px;
+}
+
+.myOrder .tit {
+	display: flex;
+	justify-content: space-between;
+	padding-right: 15px;
+}
+
+.myOrder .tit .more {
+	color: gray;
+}
+
+.myProperty .Items,
+.myOrder .Items,
+.myFunction .Items {
+	border-top: 1px solid #eee;
+	padding: 8px;
+	padding-top: 16px;
+	display: flex;
+}
+
+.myProperty .Items .item,
+.myOrder .Items .item,
+.myFunction .Items .item {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.myProperty .Items .item text,
+.myOrder .Items .item text,
+.myFunction .Items .item text {
+	font-size: 14px;
+}
+
+.myProperty .Items .item image,
+.myOrder .Items .item image,
+.myFunction .Items .item image {
+	width: 30px;
+	height: 30px;
+}

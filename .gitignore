@@ -1,0 +1,17 @@
+# Windows
+[Dd]esktop.ini
+Thumbs.db
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+
+# Node.js
+node_modules/
+
+# 忽略当前路径下的00提供给学生的素材文件夹，该文件夹下的所有内容都会被忽略
+

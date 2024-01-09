@@ -1,0 +1,22 @@
+<!--pkg_my/address/address.wxml-->
+<view class="container">
+	<view class="list">
+		<view class="list-item" wx:for="{{list}}" wx:key="index">
+			<view class="left">
+				<view class="tit">{{item.address||''}}{{item.doornum}}</view>
+				<view class="info">
+					<text class="tag">{{item.tips==1?'家':(item.tips==2?'公司':(item.tips==3?'学校':'其他'))}}</text>
+					<text class="user">{{item.people}}{{item.sex==0?'(女士)':'(先生)'}} {{item.phone}}</text>
+				</view>
+			</view>
+			<view class="right">
+				<text class="iconfont icon-bianji" style="color: rgb(99, 97, 97);"></text>
+			</view>
+		</view>
+		<view class="tip">暂无更多了~</view>
+	</view>
+	<view class="footer" bind:tap="toAadded">
+		<text class="iconfont icon-jiahao"></text>
+		新增收货地址
+	</view>
+</view>

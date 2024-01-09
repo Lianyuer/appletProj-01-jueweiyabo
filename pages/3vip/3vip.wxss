@@ -1,0 +1,36 @@
+/* 条形码 */
+.barCode {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.barCode .text {
+	display: flex;
+	align-self: flex-start;
+	align-items: center;
+	margin: 40px 0 20px 10px;
+}
+
+.barCode .codePic {
+	width: 93%;
+	height: 200rpx;
+}
+
+.barCode .codePic image {
+	width: 100%;
+	height: 200rpx;
+}
+
+/* 二维码 */
+.qrCode {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.qrCode .tip {
+	color: gray;
+}

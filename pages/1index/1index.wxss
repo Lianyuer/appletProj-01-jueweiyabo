@@ -1,0 +1,123 @@
+/* 最大容器 */
+.All {
+	background-color: #f7f7f7;
+	height: 1250rpx;
+}
+
+/* 轮播图 */
+.swiper {
+	height: 612rpx;
+}
+
+.swiper swiper {
+	height: 100%;
+}
+
+.swiper swiper swiper-item image {
+	width: 100%;
+	height: 100%;
+}
+
+/* 轮播图以下内容 */
+.footer {
+	box-sizing: border-box;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* 取餐方式 */
+.way {
+	display: flex;
+	width: 90%;
+	background-color: #fff;
+	position: relative;
+	top: -5px;
+	border-radius: 15px;
+	padding: 8px;
+}
+
+.way .ziqu,
+.way .waimai {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+}
+
+.way image {
+	border-radius: 15px;
+	width: 180rpx;
+	height: 180rpx;
+}
+
+.ziqu text:nth-of-type(1),
+.waimai text:nth-of-type(1) {
+	font-weight: bolder;
+	font-family: '微软雅黑';
+}
+
+.ziqu text:nth-of-type(2),
+.waimai text:nth-of-type(2) {
+	font-family: '微软雅黑';
+	color: gray;
+	font-size: 10px;
+}
+
+/* 用户信息 */
+.user {
+	width: 90%;
+	height: 180rpx;
+	background-color: #fff;
+	border-radius: 15px;
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 10px;
+
+}
+
+.user .avatar {
+	display: flex;
+	align-items: center;
+}
+
+.user .avatar image {
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	margin-right: 10px;
+}
+
+.user .userInfo {
+	display: flex;
+}
+
+.user .userInfo .coupon,
+.user .userInfo .balance {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 3px;
+}
+
+.user .userInfo .coupon text:nth-of-type(1),
+.user .userInfo .balance text:nth-of-type(1) {
+	font-weight: bolder;
+}
+
+/* c位 */
+.cwei {
+	width: 95%;
+	height: 200rpx;
+	margin-top: 10px;
+}
+
+.cwei image {
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+}

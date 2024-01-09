@@ -1,0 +1,21 @@
+/**app.wxss**/
+
+@import './style/iconfont.wxss';
+@import './style/icon.wxss';
+@import './style/hersit.wxss';
+@import './style/font.wxss';
+@import './style/first.wxss';
+@import './style/conver.wxss';
+@import './style/jiantou.wxss';
+@import './style/location.wxss';
+@import './styles/iconfont.wxss';
+
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} */

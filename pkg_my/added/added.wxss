@@ -1,0 +1,125 @@
+.container {
+	background-color: #f7f7f7;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	/* padding: 15px; */
+}
+
+.form {
+	background-color: #fff;
+	padding: 15px 15px 0;
+}
+
+/* 收货人 */
+.consignee {
+	display: flex;
+	align-items: center;
+	height: 150rpx;
+	border-bottom: 1px solid #eee;
+}
+
+.tit {
+	display: inline-block;
+	width: 48px;
+	font-weight: bolder;
+	margin-right: 10px;
+}
+
+.consignee .right {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+
+/* 手机号 */
+.phone {
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #eee;
+}
+
+.phone .left {
+	display: flex;
+
+}
+
+.phone .autoWrite {
+	border: 1px solid #000;
+}
+
+/* 地址 */
+.addr {
+	height: 55px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #eee;
+}
+
+.addr .left {
+	display: flex;
+}
+
+/* .addr input {
+	border: 1px solid red;
+} */
+
+/* 门牌号 */
+.doorNum {
+	height: 50px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #eee;
+}
+
+/* 标签 */
+.tags {
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+
+.tags .tags-btns button {
+	border: 1px solid #ccc;
+	margin: 0 2px;
+	color: #ccc;
+	font-weight: lighter;
+	font-size: 14px;
+	height: 24px;
+	line-height: 23px;
+	padding: 0 8px;
+}
+
+/* 行为按钮 */
+.behavior {
+	display: flex;
+	justify-content: space-around;
+}
+
+.behavior button {
+	width: 35%;
+	margin-top: 20px;
+}
+
+.behavior .del {
+	border: 1px solid #ccc;
+	color: #ccc;
+	font-weight: lighter;
+	background-color: rgb(240, 235, 235);
+}
+
+.behavior .save {
+	background-color: red;
+	color: white;
+	font-weight: lighter;
+}
+
+wx-radio .wx-radio-input {
+	width: 15px !important;
+	height: 15px !important;
+}

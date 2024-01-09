@@ -1,0 +1,82 @@
+{
+  "pages": [
+    "pages/1index/1index",
+    "pages/2book/2book",
+    "pages/3vip/3vip",
+    "pages/4order/4order",
+    "pages/5center/5center",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "subPackages": [
+    {
+      "root": "detail",
+      "pages": [
+        "pages/1index/1index",
+        "pages/2book/2book",
+        "pages/3vip/3vip",
+        "pages/4order/4order",
+        "pages/5center/5center"
+      ]
+    },
+    {
+      "root": "pkg_my",
+      "pages": [
+        "address/address",
+        "added/added"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/1index/1index",
+        "text": "首页",
+        "iconPath": "/pages/imgs/1.png",
+        "selectedIconPath": "/pages/imgs/2.png"
+      },
+      {
+        "pagePath": "pages/2book/2book",
+        "text": "点单",
+        "iconPath": "/pages/imgs/dian.png",
+        "selectedIconPath": "/pages/imgs/dian1.png"
+      },
+      {
+        "pagePath": "pages/3vip/3vip",
+        "iconPath": "/pages/imgs/vip.png",
+        "selectedIconPath": "/pages/imgs/vip.png"
+      },
+      {
+        "pagePath": "pages/4order/4order",
+        "text": "订单",
+        "iconPath": "/pages/imgs/ding.png",
+        "selectedIconPath": "/pages/imgs/ding1.png"
+      },
+      {
+        "pagePath": "pages/5center/5center",
+        "text": "我的",
+        "iconPath": "/pages/imgs/persen.png",
+        "selectedIconPath": "/pages/imgs/persen1.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index"
+  },
+  "style": "v2",
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
