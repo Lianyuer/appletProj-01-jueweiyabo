@@ -17,16 +17,16 @@ Page({
   // 跳转到编辑地址页面
   toEdit(e) {
     console.log(e.currentTarget.dataset.index);
-    wx.navigateTo({
-      url: `../edit/edit?id=${e.currentTarget.dataset.index}`,
-    })
+    // wx.navigateTo({
+    //   url: `../edit/edit?id=${e.currentTarget.dataset.index}`,
+    // })
   },
   getData() {
     wx.request({
       url: 'http://127.0.0.1:9090/alladdress',
       method: 'get',
       success: res => {
-        // console.log(res);
+        console.log('alladdress', res);
         this.setData({
           list: res.data.data
         })

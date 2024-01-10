@@ -15,29 +15,24 @@ Page({
       tips: 0, // 当前是第几个标签
     },
     query: '', // 路由跳转传参
-    userAddrById: ''
   },
   // 用于数据回显
   getData() {
-    var relId = Number(this.data.query.id) + 1
+    var relId = this.data.query.id
     // console.log('relId', relId);
     wx.request({
       url: `http://127.0.0.1:9090/getidaddress?id=${relId}`,
       method: 'GET',
       success: res => {
         // console.log('put', res);
-        var that = this
-        console.log('this', this);
+        var userAddrById = res.data.data[0]
         this.setData({
-          userAddrById: res.data.data
-        })
-        this.setData({
-          'form.people': that.data.userAddrById[0].people,
-          'form.sex': that.data.userAddrById[0].sex,
-          'form.phone': that.data.userAddrById[0].phone,
-          'form.address': that.data.userAddrById[0].address,
-          'form.doornum': that.data.userAddrById[0].doornum,
-          'form.tips': that.data.userAddrById[0].tips,
+          'form.people': userAddrById.people,
+          'form.sex': userAddrById.sex,
+          'form.phone': userAddrById.phone,
+          'form.address': userAddrById.address,
+          'form.doornum': userAddrById.doornum,
+          'form.tips': userAddrById.tips,
         })
         // console.log('userAddrById', this.data.userAddrById[0]);
         // console.log('form', this.data.form);
@@ -75,13 +70,14 @@ Page({
       'form.tips': e.currentTarget.dataset.tag
     })
   },
-  // 提交编辑
-  submit() {
+  // 提交修改
+  update() {
     wx.request({
       url: 'http://127.0.0.1:9090/update_address',
-      method: 'PUT',
-      data: {   //data里面放携带参数
-        "people": this.data.form.people,  //这里根据需求写  例:"name" : "张三"
+      method: 'POST',
+      data: {
+        "id": this.data.query.id,
+        "people": this.data.form.people,
         "sex": this.data.form.sex,
         "phone": this.data.form.phone,
         "address": this.data.form.address,
@@ -89,10 +85,37 @@ Page({
         "tips": this.data.form.tips,
       },
       header: {
-        "content-type": 'application/json' //携带参数的格式，这里我们用json格式，对应上面data
+        "content-type": 'application/json'
       },
       success: res => {
-        console.log(res);
+        console.log('edit', res);
+        if (res.data.state == 1) {
+          wx.showToast({
+            title: '修改成功'
+          })
+          setTimeout(() => {
+            wx.navigateBack({
+              delta: 1
+            })
+          }, 1000);
+        }
+      }
+    })
+  },
+  // 删除地址
+  del() {
+    wx.request({
+      url: 'http://127.0.0.1:9090/del_address?id=' + this.data.query.id,
+      success: res => {
+        console.log('del', res);
+        if (res.data.state == 1) {
+          wx.showToast({
+            title: '删除成功'
+          })
+          setTimeout(() => {
+            wx.navigateBack()
+          }, 1000)
+        }
       }
     })
   },

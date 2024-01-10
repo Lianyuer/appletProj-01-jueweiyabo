@@ -10,7 +10,9 @@
 				</view>
 			</view>
 			<view class="right">
-				<text class="iconfont icon-bianji" style="color: rgb(99, 97, 97);" data-index="{{index}}" bind:tap="toEdit"></text>
+				<navigator url="../edit/edit?id={{item.id}}">
+					<text class="iconfont icon-bianji" style="color: rgb(99, 97, 97);" data-index="{{index}}" bind:tap="toEdit"></text>
+				</navigator>
 			</view>
 		</view>
 		<view class="tip">暂无更多了~</view>

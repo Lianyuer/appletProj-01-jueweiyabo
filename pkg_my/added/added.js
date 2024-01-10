@@ -45,7 +45,8 @@ Page({
       'form.tips': e.currentTarget.dataset.tag
     })
   },
-  submit() {
+  // 新增地址
+  add() {
     if (!this.data.form.people | !this.data.form.sex | !this.data.form.phone | !this.data.form.address | !this.data.form.doornum | !this.data.form.tips) {
       wx.showToast({
         title: '表单不能为空',
@@ -56,8 +57,8 @@ Page({
       wx.request({
         url: 'http://127.0.0.1:9090/add_address',
         method: 'POST',
-        data: {   //data里面放携带参数
-          "people": this.data.form.people,  //这里根据需求写  例:"name" : "张三"
+        data: {
+          "people": this.data.form.people,
           "sex": this.data.form.sex,
           "phone": this.data.form.phone,
           "address": this.data.form.address,
@@ -65,17 +66,23 @@ Page({
           "tips": this.data.form.tips,
         },
         header: {
-          "content-type": 'application/json' //携带参数的格式，这里我们用json格式，对应上面data
+          "content-type": 'application/json'
         },
         success: (res) => {
-          console.log(res);
-          wx.navigateTo({
-            url: '../address/address',
+          console.log('add', res);
+          wx.showToast({
+            title: '新增成功',
           })
+          setTimeout(() => {
+            wx.navigateBack({
+              delta: 1
+            })
+          }, 1000)
         }
       })
     }
   },
+
   /**
    * 生命周期函数--监听页面加载
    */

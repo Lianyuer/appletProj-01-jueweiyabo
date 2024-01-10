@@ -44,7 +44,7 @@
 		</view>
 	</view>
 	<view class="behavior">
-		<button class="del">删除</button>
-		<button class="save" bind:tap="submit">保存</button>
+		<button class="del" bind:tap="del">删除</button>
+		<button class="save" bind:tap="update">保存</button>
 	</view>
 </view>

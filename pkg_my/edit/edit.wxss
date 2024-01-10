@@ -125,7 +125,7 @@
 	border: 1px solid #ccc;
 	color: #ccc;
 	font-weight: lighter;
-	background-color: rgb(240, 235, 235);
+	background-color: rgb(255, 255, 255);
 }
 
 .behavior .save {
